@@ -1,4 +1,4 @@
-# 💰 DioBank 💰
+# 💰 DioBanks 💰
 
 ![](https://thumbs.gfycat.com/GreedyReasonableGoldenmantledgroundsquirrel-max-1mb.gif)
 
