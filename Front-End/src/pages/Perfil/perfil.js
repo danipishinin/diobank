@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import HeaderHome from '../HeaderHome';
+import HeaderHome from '../../components/HeaderHome';
 import {
     Button,
     Card,
