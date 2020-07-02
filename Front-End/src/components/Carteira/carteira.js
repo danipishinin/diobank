@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './styles.scss';
+import './index.tsx';
 import HeaderHome from '../HeaderHome';
 import {
     Button,
@@ -51,8 +52,8 @@ class Carteira extends React.Component {
                             <p className="detalhesInvestimento1" >Rendimento Bruto</p>
                             </Row>
                             <Row className="rowInvestimento">
-                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$100,00</span></p>
-                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$7,75</span></p>
+                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$570,00</span></p>
+                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$2,15</span></p>
                             </Row>
                             <p className="detalhesInvestimento" ><span className="vencimentos">Vencimento em: 30/07/2020</span></p>
                         </Card>
@@ -65,13 +66,16 @@ class Carteira extends React.Component {
                             <p className="detalhesInvestimento1" >Rendimento Bruto</p>
                             </Row>
                             <Row className="rowInvestimento">
-                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$100,00</span></p>
-                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$7,75</span></p>
+                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$134,00</span></p>
+                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$9,12</span></p>
                             </Row>
                             <p className="detalhesInvestimento" ><span className="vencimentos">Vencimento em: 30/07/2020</span></p>
                         </Card>
-                        
                         </Row>
+                        <Card>
+                        <CardBody>
+                        </CardBody>
+                        </Card>
                     </div>
                 </div>
             </>
