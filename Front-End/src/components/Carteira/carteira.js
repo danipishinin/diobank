@@ -17,6 +17,13 @@ import {
     Col,
 } from "reactstrap";
 
+import {
+    dashboardNASDAQChart,
+  } from "../../variables/charts.js";
+
+import { Line } from "react-chartjs-2";
+
+
 class Carteira extends React.Component {
     render() {
         return (
@@ -24,58 +31,87 @@ class Carteira extends React.Component {
                 <div className="background">
                     <HeaderHome />
                     <div className="content">
-                    <CardTitle tag="h2">Meus investimentos</CardTitle>
-                    <CardBody></CardBody>
-                    <p className="textoCarteira" tag="h4">Iglá, seu patrimônio hoje é de: <span className="precoInvestimento">R$15.023,98</span></p>
-                    <p className="textoCarteira" tag="h4">Total Investido: <span className="precoInvestimento">R$14.000,00</span></p>
+                        <CardTitle tag="h2">Meus investimentos</CardTitle>
+                        <CardBody></CardBody>
+                        <p className="textoCarteira" tag="h4">Iglá, seu patrimônio hoje é de: <span className="valorInvestir">R$15.023,98</span></p>
+                        <p className="textoCarteira" tag="h4">Total Investido: <span className="valorInvestir">R$14.000,00</span></p>
                         <Row>
-                        <Card className="investimentos">
-                            <CardBody>
-                            <CardTitle tag="h5">Tesouro Direto</CardTitle>
-                            </CardBody>
-                            <Row className="rowInvestimento">
-                            <p className="detalhesInvestimento1" >Valor acumulado</p>
-                            <p className="detalhesInvestimento1" >Rendimento Bruto</p>
-                            </Row>
-                            <Row className="rowInvestimento">
-                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$100,00</span></p>
-                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$7,75</span></p>
-                            </Row>
-                            <p className="detalhesInvestimento" ><span className="vencimentos">Vencimento em: 30/07/2020</span></p>
-                        </Card>
-                        <Card className="investimentos">
-                            <CardBody>
-                            <CardTitle tag="h5">CDB</CardTitle>
-                            </CardBody>
-                            <Row className="rowInvestimento">
-                            <p className="detalhesInvestimento1" >Valor acumulado</p>
-                            <p className="detalhesInvestimento1" >Rendimento Bruto</p>
-                            </Row>
-                            <Row className="rowInvestimento">
-                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$570,00</span></p>
-                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$2,15</span></p>
-                            </Row>
-                            <p className="detalhesInvestimento" ><span className="vencimentos">Vencimento em: 30/07/2020</span></p>
-                        </Card>
-                        <Card className="investimentos">
-                            <CardBody>
-                            <CardTitle tag="h5">LCI LCA</CardTitle>
-                            </CardBody>
-                            <Row className="rowInvestimento">
-                            <p className="detalhesInvestimento1" >Valor acumulado</p>
-                            <p className="detalhesInvestimento1" >Rendimento Bruto</p>
-                            </Row>
-                            <Row className="rowInvestimento">
-                            <p className="detalhesInvestimentoValor1" ><span className="valorInvestir">R$134,00</span></p>
-                            <p className="detalhesInvestimentoValor" ><span className="valorInvestir">R$9,12</span></p>
-                            </Row>
-                            <p className="detalhesInvestimento" ><span className="vencimentos">Vencimento em: 30/07/2020</span></p>
-                        </Card>
+                        <Col md="4">
+                            <Card className="card-chart">
+                                <CardHeader>
+                                    <CardTitle tag="h5">Tesouro Selic</CardTitle>
+                                </CardHeader>
+                                <CardBody>
+                                    <Line
+                                        data={dashboardNASDAQChart.data}
+                                        options={dashboardNASDAQChart.options}
+                                        width={400}
+                                        height={100}
+                                    />
+                                </CardBody>
+                                <CardFooter>
+                                    <div className="chart-legend">
+                                        <i className="fa fa-circle text-success" /> Investimento Inicial{" "}
+                                        <i className="fa fa-circle text-danger" /> Investimento Total
+                                    </div>
+                                    <hr />
+                                    <div className="card-stats">
+                                        <i className="fa fa-check" /> Última atualização: 01/07/2020 23:45
+                                </div>
+                                </CardFooter>
+                            </Card>
+                        </Col>
+                        <Col md="4">
+                            <Card className="card-chart">
+                                <CardHeader>
+                                    <CardTitle tag="h5">Tesouro IPCA+</CardTitle>
+                                </CardHeader>
+                                <CardBody>
+                                    <Line
+                                        data={dashboardNASDAQChart.data}
+                                        options={dashboardNASDAQChart.options}
+                                        width={400}
+                                        height={100}
+                                    />
+                                </CardBody>
+                                <CardFooter>
+                                    <div className="chart-legend">
+                                        <i className="fa fa-circle text-success" /> Investimento Inicial{" "}
+                                        <i className="fa fa-circle text-danger" /> Investimento Total
+                                    </div>
+                                    <hr />
+                                    <div className="card-stats">
+                                        <i className="fa fa-check" /> Última atualização: 01/07/2020 23:45
+                                </div>
+                                </CardFooter>
+                            </Card>
+                        </Col>
+                        <Col md="4">
+                            <Card className="card-chart">
+                                <CardHeader>
+                                    <CardTitle tag="h5">CDB e LC</CardTitle>
+                                </CardHeader>
+                                <CardBody>
+                                    <Line
+                                        data={dashboardNASDAQChart.data}
+                                        options={dashboardNASDAQChart.options}
+                                        width={400}
+                                        height={100}
+                                    />
+                                </CardBody>
+                                <CardFooter>
+                                    <div className="chart-legend">
+                                        <i className="fa fa-circle text-success" /> Investimento Inicial{" "}
+                                        <i className="fa fa-circle text-danger" /> Investimento Total
+                                    </div>
+                                    <hr />
+                                    <div className="card-stats">
+                                        <i className="fa fa-check" /> Última atualização: 01/07/2020 23:45
+                                </div>
+                                </CardFooter>
+                            </Card>
+                        </Col>
                         </Row>
-                        <Card>
-                        <CardBody>
-                        </CardBody>
-                        </Card>
                     </div>
                 </div>
             </>
